@@ -12,8 +12,14 @@ CAD::Format::DWG::AC1001 - Read AutoCAD TODO DWG file.
 
  my $dwg = CAD::Format::DWG::AC1001->new;
  my $dwg = CAD::Format::DWG::AC1001::from_file($dwg_file);
- my $header_hr = $dwg->header;
- my $entities_hr = $dwg->entities;
+ my $blocks_ar = $dwg->blocks;
+ my $entities_ar = $dwg->entities;
+ my $header = $dwg->header;
+ my $layers_ar = $dwg->layers;
+ my $linetypes_ar = $dwg->linetypes;
+ my $styles_ar = $dwg->styles;
+ my $views_ar = $dwg->views;
+ my $block_entities_ar = $dwg->block_entities;
 
 =head1 DESCRIPTION
 
