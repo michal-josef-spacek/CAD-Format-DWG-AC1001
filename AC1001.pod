@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-CAD::Format::DWG::AC1001 - Read AutoCAD TODO DWG file.
+CAD::Format::DWG::AC1001 - Read AutoCAD r2.4 DWG file.
 
 =head1 SYNOPSIS
 

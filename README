@@ -1,5 +1,5 @@
 NAME
-    CAD::Format::DWG::AC1001 - Read AutoCAD TODO DWG file.
+    CAD::Format::DWG::AC1001 - Read AutoCAD r2.4 DWG file.
 
 SYNOPSIS
      use CAD::Format::DWG::AC1001;
