@@ -1,7 +1,6 @@
 TODO
 ====
 1. Add attrib
-2. Move convert.sh to Makefile.PL
 4. Fix doc methods.
 5. Is there a method how to create dwg files?
 6.
@@ -11,3 +10,5 @@ Applied
 3. Fill abstract
 OK [20211003] skim
 
+2. Move convert.sh to Makefile.PL
+OK [20211003] skim
