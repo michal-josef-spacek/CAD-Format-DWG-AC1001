@@ -1,5 +1,5 @@
 ---
-abstract: 'Read AutoCAD TODO DWG file.'
+abstract: 'Read AutoCAD r2.4 DWG file.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
