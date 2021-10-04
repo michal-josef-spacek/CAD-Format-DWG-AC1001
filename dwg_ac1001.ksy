@@ -996,6 +996,7 @@ types:
       - id: angle
         type: f8
         if: entity_common.flag2_8
+        doc: TEXT/50
       - id: width_factor
         type: f8
         if: entity_common.flag2_7
