@@ -526,6 +526,7 @@ types:
           cases:
             'entities::arc': entity_arc
             'entities::attdef': entity_attdef
+            'entities::attrib': entity_attrib
             'entities::block_begin': entity_block_begin
             'entities::block_end': entity_block_end
             'entities::insert' : entity_insert

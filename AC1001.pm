@@ -2388,6 +2388,9 @@ sub _read {
     elsif ($_on == $CAD::Format::DWG::AC1001::ENTITIES_FACE3D) {
         $self->{data} = CAD::Format::DWG::AC1001::EntityFace3d->new($self->{_io}, $self, $self->{_root});
     }
+    elsif ($_on == $CAD::Format::DWG::AC1001::ENTITIES_ATTRIB) {
+        $self->{data} = CAD::Format::DWG::AC1001::EntityAttrib->new($self->{_io}, $self, $self->{_root});
+    }
     elsif ($_on == $CAD::Format::DWG::AC1001::ENTITIES_ATTDEF) {
         $self->{data} = CAD::Format::DWG::AC1001::EntityAttdef->new($self->{_io}, $self, $self->{_root});
     }
