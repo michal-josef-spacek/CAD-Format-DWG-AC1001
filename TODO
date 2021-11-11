@@ -5,7 +5,6 @@ TODO
 6. Update style from 2.10
 add generation_flags
 7. Update layer_flag from 2.10
-8. Rewrite entity_text to generation_flags
 9.
 
 Applied
@@ -18,3 +17,6 @@ OK [20211003] skim
 
 1. Add attrib
 OK [20211004] skim
+
+8. Rewrite entity_text to generation_flags
+OK [20211111] skim

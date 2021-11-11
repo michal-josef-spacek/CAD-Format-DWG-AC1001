@@ -1013,36 +1013,8 @@ types:
         type: u1
         if: entity_common.flag2_5
         doc: TEXT/7
-      - id: flags1
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags2
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags3
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags4
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags5
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags_upside_down
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags_backwards
-        type: b1
-        if: entity_common.flag2_4
-        doc: TEXT/71
-      - id: flags8
-        type: b1
+      - id: generation
+        type: generation_flags
         if: entity_common.flag2_4
         doc: TEXT/71
       - id: type
@@ -1320,6 +1292,24 @@ types:
         doc: VIEW/31
       - id: u2a
         size: 3
+  generation_flags:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: upside_down
+        type: b1
+      - id: backwards
+        type: b1
+      - id: flag8
+        type: b1
 enums:
   entities:
     1: line
