@@ -2,8 +2,6 @@ TODO
 ====
 4. Fix doc methods.
 5. Is there a method how to create dwg files?
-6. Update style from 2.10
-add generation_flags
 7. Update layer_flag from 2.10
 9.
 
@@ -20,3 +18,7 @@ OK [20211004] skim
 
 8. Rewrite entity_text to generation_flags
 OK [20211111] skim
+
+6. Update style from 2.10
+add generation_flags
+OK [20211126] skim
