@@ -2,7 +2,6 @@ TODO
 ====
 4. Fix doc methods.
 5. Is there a method how to create dwg files?
-9. Rename current_layer to current_layer_index
 10. Rename text_style to text_style_index
 11.
 
@@ -25,4 +24,7 @@ add generation_flags
 OK [20211126] skim
 
 7. Update layer_flag from 2.10
+OK [20220213] skim
+
+9. Rename current_layer to current_layer_index
 OK [20220213] skim

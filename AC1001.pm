@@ -2563,7 +2563,7 @@ sub _read {
     $self->{linetype_scale} = $self->{_io}->read_f8le();
     $self->{text_size} = $self->{_io}->read_f8le();
     $self->{trace_width} = $self->{_io}->read_f8le();
-    $self->{current_layer} = $self->{_io}->read_s2le();
+    $self->{current_layer_index} = $self->{_io}->read_s2le();
     $self->{unknown6a} = $self->{_io}->read_s2le();
     $self->{unknown6b} = $self->{_io}->read_s2le();
     $self->{unknown6c} = $self->{_io}->read_s2le();
@@ -3040,9 +3040,9 @@ sub trace_width {
     return $self->{trace_width};
 }
 
-sub current_layer {
+sub current_layer_index {
     my ($self) = @_;
-    return $self->{current_layer};
+    return $self->{current_layer_index};
 }
 
 sub unknown6a {
