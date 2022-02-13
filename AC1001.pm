@@ -988,9 +988,9 @@ sub _read {
     my ($self) = @_;
 
     $self->{u2} = $self->{_io}->read_u1();
-    $self->{linetype_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
+    $self->{linetype_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
     $self->{u3} = $self->{_io}->read_u1();
-    $self->{description} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(44), 46, 0));
+    $self->{description} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(44), 0, 0));
     $self->{u5} = $self->{_io}->read_bytes(4);
     $self->{alignment} = $self->{_io}->read_u1();
     $self->{num_dashes} = $self->{_io}->read_u1();
@@ -1622,7 +1622,7 @@ sub _read {
     my ($self) = @_;
 
     $self->{unknown1} = $self->{_io}->read_s1();
-    $self->{block_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
+    $self->{block_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
     $self->{u1} = $self->{_io}->read_s1();
     $self->{u2} = $self->{_io}->read_s1();
     $self->{u3} = $self->{_io}->read_s1();
@@ -2633,7 +2633,7 @@ sub _read {
     $self->{dim_suppression_of_zeros} = $self->{_io}->read_s1();
     $self->{dim_rounding} = $self->{_io}->read_f8le();
     $self->{dim_extension_line_extend2} = $self->{_io}->read_f8le();
-    $self->{dim_arrowhead_block} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 46, 0));
+    $self->{dim_arrowhead_block} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
     $self->{unknown30} = $self->{_io}->read_s1();
     $self->{circle_zoom_percent} = $self->{_io}->read_s2le();
     $self->{coordinates} = $self->{_io}->read_s2le();
@@ -4062,7 +4062,7 @@ sub _read {
     my ($self) = @_;
 
     $self->{u1} = $self->{_io}->read_bytes(1);
-    $self->{view_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
+    $self->{view_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
     $self->{u2} = $self->{_io}->read_u1();
     $self->{view_size} = $self->{_io}->read_f8le();
     $self->{center_point_x} = $self->{_io}->read_f8le();
