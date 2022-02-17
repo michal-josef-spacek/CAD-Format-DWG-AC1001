@@ -2670,14 +2670,11 @@ sub _read {
     $self->{text_size} = $self->{_io}->read_f8le();
     $self->{trace_width} = $self->{_io}->read_f8le();
     $self->{current_layer_index} = $self->{_io}->read_s2le();
-    $self->{unknown6a} = $self->{_io}->read_s2le();
-    $self->{unknown6b} = $self->{_io}->read_s2le();
-    $self->{unknown6c} = $self->{_io}->read_s2le();
-    $self->{unknown6d} = $self->{_io}->read_s2le();
-    $self->{unknown7a} = $self->{_io}->read_bytes(2);
-    $self->{unknown7b} = $self->{_io}->read_bytes(2);
-    $self->{unknown7c} = $self->{_io}->read_bytes(2);
-    $self->{unknown7d} = $self->{_io}->read_bytes(2);
+    $self->{unknown5} = $self->{_io}->read_s2le();
+    $self->{unknown6} = $self->{_io}->read_f8le();
+    $self->{unknown7a} = $self->{_io}->read_s2le();
+    $self->{unknown7b} = $self->{_io}->read_s2le();
+    $self->{unknown7c} = $self->{_io}->read_s2le();
     $self->{unknown8} = $self->{_io}->read_f8le();
     $self->{linear_units_format} = $self->{_io}->read_s2le();
     $self->{linear_units_precision} = $self->{_io}->read_s2le();
@@ -3151,24 +3148,14 @@ sub current_layer_index {
     return $self->{current_layer_index};
 }
 
-sub unknown6a {
+sub unknown5 {
     my ($self) = @_;
-    return $self->{unknown6a};
+    return $self->{unknown5};
 }
 
-sub unknown6b {
+sub unknown6 {
     my ($self) = @_;
-    return $self->{unknown6b};
-}
-
-sub unknown6c {
-    my ($self) = @_;
-    return $self->{unknown6c};
-}
-
-sub unknown6d {
-    my ($self) = @_;
-    return $self->{unknown6d};
+    return $self->{unknown6};
 }
 
 sub unknown7a {
@@ -3184,11 +3171,6 @@ sub unknown7b {
 sub unknown7c {
     my ($self) = @_;
     return $self->{unknown7c};
-}
-
-sub unknown7d {
-    my ($self) = @_;
-    return $self->{unknown7d};
 }
 
 sub unknown8 {
