@@ -2,7 +2,6 @@ TODO
 ====
 5. Is there a method how to create dwg files?
 12. structure for date information
-13. Rewrite all point_2d|3d
 14.
 
 Applied
@@ -36,4 +35,7 @@ OK [20220213] skim
 OK [20220218] skim
 
 4. Fix doc methods.
+OK [20220218] skim
+
+13. Rewrite all point_2d|3d
 OK [20220218] skim
