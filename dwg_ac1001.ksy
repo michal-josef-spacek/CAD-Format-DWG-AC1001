@@ -163,7 +163,6 @@ types:
          value: (blocks_size & 0xff000000) >> 24
       blocks_size_b:
          value: (blocks_size & 0x00ffffff)
-      ## TODO
   header_variables:
     seq:
       - id: insertion_base
