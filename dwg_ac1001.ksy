@@ -155,6 +155,16 @@ types:
         size: 2
       - id: table_view_begin
         type: u4
+      - id: variables
+        type: header_variables
+    instances:
+      blocks_size_a:
+         value: (blocks_size & 0xff000000) >> 24
+      blocks_size_b:
+         value: (blocks_size & 0x00ffffff)
+      ## TODO
+  header_variables:
+    seq:
       - id: insertion_base_x
         type: f8
         doc: 0x005e-0x0065, $INSBASE/10
@@ -493,11 +503,6 @@ types:
         value: create_date_days + (create_date_ms / 86400000.0)
       update_date:
         value: update_date_days + (update_date_ms / 86400000.0)
-      blocks_size_a:
-         value: (blocks_size & 0xff000000) >> 24
-      blocks_size_b:
-         value: (blocks_size & 0x00ffffff)
-      ## TODO
   unknown_repeating:
     seq:
       - id: unknown_repeating1
