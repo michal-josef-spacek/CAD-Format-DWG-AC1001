@@ -2,7 +2,6 @@ TODO
 ====
 5. Is there a method how to create dwg files?
 12. structure for date information
-14. Rewrite table sections to table type
 15.
 
 Applied
@@ -39,4 +38,7 @@ OK [20220218] skim
 OK [20220218] skim
 
 13. Rewrite all point_2d|3d
+OK [20220218] skim
+
+14. Rewrite table sections to table type
 OK [20220218] skim
