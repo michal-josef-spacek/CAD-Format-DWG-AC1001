@@ -3497,7 +3497,7 @@ sub _read {
     $self->{zeros} = $self->{_io}->read_bytes(6);
     $self->{zero_one_or_three} = $self->{_io}->read_s1();
     $self->{version_major} = $self->{_io}->read_s2le();
-    $self->{version_minor} = $self->{_io}->read_s2le();
+    $self->{num_sections} = $self->{_io}->read_s2le();
     $self->{version_micro} = $self->{_io}->read_s2le();
     $self->{dwg_version} = $self->{_io}->read_s1();
     $self->{entities_start} = $self->{_io}->read_u4le();
@@ -3549,9 +3549,9 @@ sub version_major {
     return $self->{version_major};
 }
 
-sub version_minor {
+sub num_sections {
     my ($self) = @_;
-    return $self->{version_minor};
+    return $self->{num_sections};
 }
 
 sub version_micro {

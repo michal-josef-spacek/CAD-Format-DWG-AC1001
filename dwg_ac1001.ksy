@@ -100,7 +100,7 @@ types:
         type: s1
       - id: version_major
         type: s2
-      - id: version_minor
+      - id: num_sections
         type: s2
       - id: version_micro
         type: s2
