@@ -1050,7 +1050,7 @@ types:
       - id: linetype_index
         type: u2
         doc: LAYER/6
-      - id: unknown1
+      - id: u1
         type: s1
   layer_flag:
     seq:

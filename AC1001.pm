@@ -1946,7 +1946,7 @@ sub _read {
     $self->{layer_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
     $self->{color} = $self->{_io}->read_s2le();
     $self->{linetype_index} = $self->{_io}->read_u2le();
-    $self->{unknown1} = $self->{_io}->read_s1();
+    $self->{u1} = $self->{_io}->read_s1();
 }
 
 sub flag {
@@ -1969,9 +1969,9 @@ sub linetype_index {
     return $self->{linetype_index};
 }
 
-sub unknown1 {
+sub u1 {
     my ($self) = @_;
-    return $self->{unknown1};
+    return $self->{u1};
 }
 
 ########################################################################
