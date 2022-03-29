@@ -703,33 +703,40 @@ types:
         type: entity_common
       - id: u1
         type: f8
+        doc: ATTRIB/10
       - id: u2
         type: f8
+        doc: ATTRIB/20
       - id: u3
         type: f8
+        doc: ATRRIB/40
       - id: size
         type: s2
       - id: text
         size: size
+        doc: ATRRIB/1
       - id: size2
         type: s2
       - id: text2
         size: size2
+        doc: ATRRIB/2
       - id: u4
-        size: 1
+        type: u1
       - id: u5
         type: f8
         if: entity_common.flag2_7
+        doc: ATRRIB/50
       - id: u6
+        type: u1
+        if: entity_common.flag2_4
+      - id: u7
         type: u1
         if: entity_common.flag2_2
         # 1, 2 nebo 7?
-      - id: u7
-        type: f8
+      - id: aligned_to
+        type: point_2d
         if: entity_common.flag2_1
-      - id: u8
-        type: f8
-        if: entity_common.flag2_1
+        doc: ATTRIB/11|21
   entity_block_begin:
     seq:
       - id: entity_common

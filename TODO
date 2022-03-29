@@ -2,7 +2,6 @@ TODO
 ====
 5. Is there a method how to create dwg files?
 12. structure for date information
-15. Attrib z AC1002
 16.
 
 Applied
@@ -43,3 +42,6 @@ OK [20220218] skim
 
 14. Rewrite table sections to table type
 OK [20220218] skim
+
+15. Attrib z AC1002
+OK [20220329] skim

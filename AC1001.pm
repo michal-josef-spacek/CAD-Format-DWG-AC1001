@@ -245,18 +245,18 @@ sub _read {
     $self->{text} = $self->{_io}->read_bytes($self->size());
     $self->{size2} = $self->{_io}->read_s2le();
     $self->{text2} = $self->{_io}->read_bytes($self->size2());
-    $self->{u4} = $self->{_io}->read_bytes(1);
+    $self->{u4} = $self->{_io}->read_u1();
     if ($self->entity_common()->flag2_7()) {
         $self->{u5} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_2()) {
+    if ($self->entity_common()->flag2_4()) {
         $self->{u6} = $self->{_io}->read_u1();
     }
-    if ($self->entity_common()->flag2_1()) {
-        $self->{u7} = $self->{_io}->read_f8le();
+    if ($self->entity_common()->flag2_2()) {
+        $self->{u7} = $self->{_io}->read_u1();
     }
     if ($self->entity_common()->flag2_1()) {
-        $self->{u8} = $self->{_io}->read_f8le();
+        $self->{aligned_to} = CAD::Format::DWG::AC1001::Point2d->new($self->{_io}, $self, $self->{_root});
     }
 }
 
@@ -320,9 +320,9 @@ sub u7 {
     return $self->{u7};
 }
 
-sub u8 {
+sub aligned_to {
     my ($self) = @_;
-    return $self->{u8};
+    return $self->{aligned_to};
 }
 
 ########################################################################
