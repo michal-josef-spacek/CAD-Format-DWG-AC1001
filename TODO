@@ -2,7 +2,6 @@ TODO
 ====
 5. Is there a method how to create dwg files?
 12. structure for date information
-16. Sync attdef and attrib with AC2.10
 17.
 
 Applied
@@ -46,3 +45,6 @@ OK [20220218] skim
 
 15. Attrib z AC1002
 OK [20220329] skim
+
+16. Sync attdef and attrib with AC2.10
+OK [20220424] skim
