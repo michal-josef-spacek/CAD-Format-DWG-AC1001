@@ -1313,8 +1313,10 @@ types:
       - id: view_dir
         type: point_3d
         doc: VIEW/11|21|31
-      - id: u2a
-        size: 3
+      - id: flag_3d
+        type: u2
+      - id: u1
+        size: 1
   view_flag:
     seq:
       - id: flag1
