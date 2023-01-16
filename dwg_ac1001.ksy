@@ -568,8 +568,6 @@ types:
         type: b1
   entity_common:
     seq:
-      - id: entity_mode
-        type: entity_mode
       - id: entity_size
         type: s2
       - id: entity_layer_index
@@ -620,6 +618,8 @@ types:
         if: entity_mode.entity_thickness_flag
   entity_arc:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: center_point
@@ -636,6 +636,8 @@ types:
         doc: ARC/51
   entity_attdef:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: start_point
@@ -720,6 +722,8 @@ types:
         type: b1
   entity_attrib:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: point_from
@@ -796,6 +800,8 @@ types:
         type: b1
   entity_block_begin:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: insert_point
@@ -803,10 +809,14 @@ types:
         doc: BLOCK/10|20
   entity_block_end:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
   entity_insert:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: block_index
@@ -852,6 +862,8 @@ types:
         doc: INSERT/45
   entity_circle:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: center_point
@@ -862,6 +874,8 @@ types:
         doc: CIRCLE/40
   entity_dim:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: block_index
@@ -903,10 +917,14 @@ types:
         if: entity_common.flag3_8
   entity_face3d:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
   entity_line:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: x1
@@ -923,6 +941,8 @@ types:
         doc: LINE/21
   entity_line3d:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: x1
@@ -949,12 +969,16 @@ types:
     seq:
       - id: entity_mode
         type: entity_mode
+      - id: entity_mode
+        type: entity_mode
       - id: entity_size
         type: s2
       - id: xxx
         size: entity_size - 4
   entity_point:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: x
@@ -965,6 +989,8 @@ types:
         doc: POINT/20
   entity_polyline:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: flag
@@ -999,12 +1025,16 @@ types:
         type: b1
   entity_seqend:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: unknown
         size: 4
   entity_shape:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: x
@@ -1028,6 +1058,8 @@ types:
         if: entity_common.flag2_7
   entity_solid:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: from
@@ -1040,6 +1072,8 @@ types:
         type: point_2d
   entity_text:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: insert_point
@@ -1087,6 +1121,8 @@ types:
         doc: TEXT/11|21
   entity_trace:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: from
@@ -1099,6 +1135,8 @@ types:
         type: point_2d
   entity_vertex:
     seq:
+      - id: entity_mode
+        type: entity_mode
       - id: entity_common
         type: entity_common
       - id: x
