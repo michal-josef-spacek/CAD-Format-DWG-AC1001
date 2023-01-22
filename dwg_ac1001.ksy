@@ -987,11 +987,11 @@ types:
         type: u1
         if: entity_common.flag2_7
         doc: DIMENSION/70
-      - id: text_size
+      - id: len_text
         type: s2
         if: entity_common.flag2_6
       - id: text
-        size: text_size
+        size: len_text
         if: entity_common.flag2_6
         doc: DIMENSION/1
       - id: extension_defining_point1

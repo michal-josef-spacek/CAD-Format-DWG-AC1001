@@ -3151,10 +3151,10 @@ sub _read {
         $self->{unknown1} = $self->{_io}->read_u1();
     }
     if ($self->entity_common()->flag2_6()) {
-        $self->{text_size} = $self->{_io}->read_s2le();
+        $self->{len_text} = $self->{_io}->read_s2le();
     }
     if ($self->entity_common()->flag2_6()) {
-        $self->{text} = $self->{_io}->read_bytes($self->text_size());
+        $self->{text} = $self->{_io}->read_bytes($self->len_text());
     }
     if ($self->entity_common()->flag2_5()) {
         $self->{extension_defining_point1} = CAD::Format::DWG::AC1001::Point2d->new($self->{_io}, $self, $self->{_root});
@@ -3213,9 +3213,9 @@ sub unknown1 {
     return $self->{unknown1};
 }
 
-sub text_size {
+sub len_text {
     my ($self) = @_;
-    return $self->{text_size};
+    return $self->{len_text};
 }
 
 sub text {
