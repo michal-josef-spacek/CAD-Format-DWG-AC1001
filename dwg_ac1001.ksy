@@ -271,7 +271,7 @@ types:
       - id: attributes
         enum: attributes
         type: s2
-        doc: 0x0192-0x0193, $ATTMODE
+        doc: 0x0192-0x0193, $ATTMODE/70
       - id: menu
         size: 15
         type: str
@@ -460,24 +460,24 @@ types:
         doc: $TDUSRTIMER/ms
       - id: user_timer
         type: s2
-        doc: 0x033f-0x0340, $USRTIMER
+        doc: 0x033f-0x0340, $USRTIMER/70
       - id: fast_zoom
         type: u2
         doc: 0x0341-0x0342, $FASTZOOM
       - id: sketch_type
         type: u2
-        doc: 0x0343-0x0344, $SKPOLY
+        doc: 0x0343-0x0344, $SKPOLY/70
       - id: unknown33b
         size: 6
       - id: unknown34
         type: f8
       - id: angle_base
         type: f8
-        doc: 0x0353-0x035a, $ANGBASE
+        doc: 0x0353-0x035a, $ANGBASE/50
       - id: angle_direction
         enum: angle_direction
         type: s2
-        doc: 0x035b-0x035c, $ANGDIR
+        doc: 0x035b-0x035c, $ANGDIR/70
     instances:
       create_date:
         value: create_date_days + (create_date_ms / 86400000.0)
