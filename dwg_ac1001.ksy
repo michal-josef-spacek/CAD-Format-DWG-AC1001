@@ -507,11 +507,11 @@ types:
             'entities::circle': entity_circle
             'entities::dim': entity_dim
             'entities::face3d': entity_face3d
+            'entities::jump': entity_jump
             'entities::line': entity_line
             'entities::line3d': entity_line3d
             'entities::point': entity_point
             'entities::polyline': entity_polyline
-            'entities::polyline2': entity_polyline
             'entities::seqend': entity_seqend
             'entities::shape': entity_shape
             'entities::solid': entity_solid
@@ -1009,6 +1009,22 @@ types:
       - id: entity_thickness
         type: f8
         if: entity_mode.has_thickness
+  entity_jump:
+    seq:
+      - id: entity_mode
+        type: entity_mode
+      - id: entity_size
+        type: s2
+      - id: address_raw
+        type: u4
+      - id: unknown_data
+        size: entity_size - 8
+        if: entity_size > 8
+    instances:
+      address_flag:
+        value: (address_raw & 0xff000000) >> 24
+      address:
+        value: (address_raw & 0x00ffffff)
   entity_line:
     seq:
       - id: entity_mode
@@ -1675,8 +1691,8 @@ enums:
     15: attdef
     16: attrib
     17: seqend
-    18: polyline
-    19: polyline2
+    18: jump
+    19: polyline
     20: vertex
     21: line3d
     22: face3d
