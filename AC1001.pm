@@ -44,6 +44,9 @@ our $ENTITIES_LINE3D = 21;
 our $ENTITIES_FACE3D = 22;
 our $ENTITIES_DIM = 23;
 
+our $CURRENT_LINETYPE_BYBLOCK = 255;
+our $CURRENT_LINETYPE_BYLAYER = 256;
+
 our $ISO_PLANE_LEFT = 0;
 our $ISO_PLANE_TOP = 1;
 our $ISO_PLANE_RIGHT = 2;
@@ -4210,7 +4213,7 @@ sub _read {
     if ($self->entity_mode()->has_thickness()) {
         $self->{entity_thickness} = $self->{_io}->read_f8le();
     }
-    $self->{block_begin_addr} = $self->{_io}->read_s4le();
+    $self->{begin_addr} = $self->{_io}->read_s4le();
 }
 
 sub entity_mode {
@@ -4253,9 +4256,9 @@ sub entity_thickness {
     return $self->{entity_thickness};
 }
 
-sub block_begin_addr {
+sub begin_addr {
     my ($self) = @_;
-    return $self->{block_begin_addr};
+    return $self->{begin_addr};
 }
 
 ########################################################################
